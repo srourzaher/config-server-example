@@ -13,10 +13,19 @@
     This pom is just here to build the independent
     server and client modules.
     -->
-
+    <scm>
+        <developerConnection>scm:git:https://github.com/srourzaher/config-server-example.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
     <modules>
         <module>server</module>
         <module>client</module>
     </modules>
-
+    <distributionManagement>
+        <repository>
+            <id>release</id>
+            <name>release</name>
+            <url>http://localhost:8081/repository/maven-releases</url>
+        </repository>
+    </distributionManagement>
 </project>
